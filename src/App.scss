@@ -1,0 +1,14 @@
+.wrapper {
+  width: calc(100vw - 200px);
+  height: 100%;
+  margin: 0 auto;
+  //background-color: #151515;
+  max-width: 1400px;
+  box-sizing: border-box;
+  border-left: 1px solid red;
+  border-right: 1px solid red;
+
+  @media (max-width: 845px) {
+    width: calc(100vw - 30px);
+  }
+}
