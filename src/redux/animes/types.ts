@@ -7,7 +7,11 @@ export type AnimeType = {
       small_image_url: string;
       large_image_url: string;
     };
-    webp: {};
+    webp: {
+      image_url: string;
+      small_image_url: string;
+      large_image_url: string;
+    };
   };
   trailer: {};
   approved: boolean;
