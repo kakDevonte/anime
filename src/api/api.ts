@@ -1,0 +1,11 @@
+import axios from 'axios';
+
+const instance = axios.create({
+  baseURL: 'https://api.jikan.moe/v4/',
+});
+
+export const animeAPI = {
+  getAnimes(page: number) {
+    return instance.get(`anime?page=${page}`);
+  },
+};
