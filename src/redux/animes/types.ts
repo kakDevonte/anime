@@ -57,10 +57,25 @@ export type AnimeType = {
   broadcast: {};
   producers: [];
   licensors: [];
-  studios: [];
-  genres: [];
+  studios: {
+    mal_id: number;
+    type: string;
+    name: string;
+    url: string;
+  }[];
+  genres: {
+    mal_id: number;
+    type: string;
+    name: string;
+    url: string;
+  }[];
   explicit_genres: [];
-  themes: [];
+  themes: {
+    mal_id: number;
+    type: string;
+    name: string;
+    url: string;
+  }[];
   demographics: [];
 };
 

@@ -1,23 +1,114 @@
+@import "src/App";
+
 .root {
   display: flex;
   flex-direction: column;
-  margin: 15px;
+  border: #f0f0f0 1px solid;
+  width: 300px;
+
+  p {
+    font-weight: bold;
+    margin: 0;
+  }
 }
 
+.synopsis {
+  display: flex;
+}
 .image {
+  height: 200px;
+  margin: 5px;
 
+  img {
+    width: initial;
+    height: 100%;
+  }
+
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .title {
-  width: 150px;
-  margin: 0;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  text-align: center;
+  margin: 10px;
+
+  p:hover {
+    cursor: pointer;
+    color: $primary-color;
+  }
 }
 
 .info {
   display: flex;
-  justify-content: space-between;
+  gap: 5px;
   font-size: 12px;
+  justify-content: center;
+}
+
+.item {
+  display: flex;
+  margin: 5px 0;
+  font-size: 12px;
+}
+
+.text {
+  margin-right: 5px;
+  text-align: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 8;
+  line-clamp: 8;
+  -webkit-box-orient: vertical;
+}
+
+.genre {
+  background-color: #f0f0f0;
+  ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style-type: none;
+    margin: 5px;
+
+    li {
+      background-color: #fff;
+      border-radius: 5px;
+      padding: 2px;
+      font-size: 10px;
+      margin: 0 5px;
+
+      &:hover {
+        cursor: pointer;
+        color: $primary-color;
+        background-color: rgba($primary-color, 0.4);
+      }
+    }
+  }
+}
+
+.valueList {
+  display: flex;
+  flex-wrap: wrap;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  li {
+    font-size: 12px;
+    margin: 0 5px;
+
+    &:hover {
+      cursor: pointer;
+      color: $primary-color;
+    }
+  }
+}
+
+.studio {
+  &:hover {
+    cursor: pointer;
+    color: $primary-color;
+  }
 }
