@@ -30,20 +30,30 @@
 }
 
 .title {
+  display: flex;
+  align-items: center;
   text-align: center;
-  margin: 10px;
+  margin: 0 auto;
+  height: 60px;
 
-  p:hover {
-    cursor: pointer;
-    color: $primary-color;
+  h2 {
+    font-size: 14px;
+
+    &:hover {
+      cursor: pointer;
+      color: $primary-color;
+    }
   }
 }
 
 .info {
   display: flex;
+  height: 22px;
   gap: 5px;
   font-size: 12px;
+  align-items: center;
   justify-content: center;
+  background-color: #f8f8f8;
 }
 
 .item {

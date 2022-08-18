@@ -5,12 +5,14 @@ import { AnimeType } from '../../redux/animes/types';
 export const AnimeItem: React.FC<AnimeType> = (props) => {
   const infoString = `${props.type},${props.aired.prop.from.year}
     | ${props.status.split(' ')[0]}
-    | ${props.episodes} ${props.episodes > 1 ? 'eps' : 'ep'} ${props.duration}`;
+    | ${!props.episodes ? 'Unknown' : props.episodes} ${
+    props.episodes > 1 ? 'eps' : 'ep'
+  } ${props.duration}`;
 
   return (
     <div className={styles.root}>
       <div className={styles.title}>
-        <p className={styles.title}>{props.title}</p>
+        <h2>{props.title}</h2>
       </div>
       <div className={styles.info}>
         <span>{infoString}</span>
